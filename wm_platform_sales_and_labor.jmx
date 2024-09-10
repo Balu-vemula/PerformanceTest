@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="HOST_URL" elementType="Argument">
+            <stringProp name="Argument.name">HOST_URL</stringProp>
+            <stringProp name="Argument.value">${__P(host_url, fdn-svc-qa.washmetrix.com)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="AUTH_TOKEN" elementType="Argument">
+            <stringProp name="Argument.name">AUTH_TOKEN</stringProp>
+            <stringProp name="Argument.value">eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjdmZTUwOTY1LTdjNmUtNGVhMC1hNzJmLTllN2MwN2RkYTQ2OSIsImV2ZW50X2lkIjoiZGUyNzA0OGYtNWE0MC00ZTdkLTlmZDAtNGNhNDBjNzU4MjljIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTcxMDE0NzQzNiwiZXhwIjoxNzEwMjMzODM2LCJpYXQiOjE3MTAxNDc0MzYsImp0aSI6ImVmZTI1MTFhLWMyNTItNDVmZS1hN2RmLTk0YzIyMjdjZjUwYSIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.qtwIQmTO5qr3ymYAKQrCOwhHxCSvIQ6TjUD-BHHm8-GYGCqxssGHh1X6lCIvCK-ivbp7r9Wh7FCioV-DvrjMdje5wDJEpGpqqu4FwH6t6LQs5k2-UJc7NXlqStDwehs2hiNZ8CvNhNSN9WM0lpIr7CdAgg9FHGWcuFGfcw7ld8FhAjQ0XZtloQzX1ioLG8_fz4IrNFW_Lb3sA2Ktcmhns9_EJUmZF4P40wvZkl9tOBryxA0LHFmX30M069RRMfsbbbHSPVvPXui9O8Z1eMs0MqZwXmVFx0sOtgHOdVL6rsHTt0_WBW4Ejkcc8ONeEXg4mSxwU4n_hqF5VnDgcyh8vQ</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="START_TIME_YEAR" elementType="Argument">
+            <stringProp name="Argument.name">START_TIME_YEAR</stringProp>
+            <stringProp name="Argument.value">${__P(start_year, 2022-03-01)}T00:00:00Z</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="END_TIME_YEAR" elementType="Argument">
+            <stringProp name="Argument.name">END_TIME_YEAR</stringProp>
+            <stringProp name="Argument.value">${__P(end_year, 2023-03-01)}T00:00:00Z</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="START_TIME_QUARTER" elementType="Argument">
+            <stringProp name="Argument.name">START_TIME_QUARTER</stringProp>
+            <stringProp name="Argument.value">${__P(start_quarter, 2023-01-01)}T00:00:00Z</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="END_TIME_QUARTER" elementType="Argument">
+            <stringProp name="Argument.name">END_TIME_QUARTER</stringProp>
+            <stringProp name="Argument.value">${__P(end_quarter, 2023-03-01)}T00:00:00Z</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_XS_ORG_ID" elementType="Argument">
+            <stringProp name="Argument.name">ORG_XS_ORG_ID</stringProp>
+            <stringProp name="Argument.value">7d26c7a5-7dbc-43db-96be-f6f142084614</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_XS_LOCATIONS" elementType="Argument">
+            <stringProp name="Argument.name">ORG_XS_LOCATIONS</stringProp>
+            <stringProp name="Argument.value">&quot;LOCATION1&quot;, &quot;LOCATION2&quot;, &quot;LOCATION3&quot;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_SMALL_ORG_ID" elementType="Argument">
+            <stringProp name="Argument.name">ORG_SMALL_ORG_ID</stringProp>
+            <stringProp name="Argument.value">f286ca96-c480-11ed-acb3-0faf6ee1bc8f</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_SMALL_LOCATIONS" elementType="Argument">
+            <stringProp name="Argument.name">ORG_SMALL_LOCATIONS</stringProp>
+            <stringProp name="Argument.value">&quot;LOCATION1&quot;, &quot;LOCATION2&quot;, &quot;LOCATION3&quot;, &quot;LOCATION4&quot;, &quot;LOCATION5&quot;, &quot;LOCATION6&quot;, &quot;LOCATION7&quot;, &quot;LOCATION8&quot;, &quot;LOCATION9&quot;, &quot;LOCATION10&quot;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_MEDIUM_ORG_ID" elementType="Argument">
+            <stringProp name="Argument.name">ORG_MEDIUM_ORG_ID</stringProp>
+            <stringProp name="Argument.value">0206aa9a-c481-11ed-acb3-0faf6ee1bc8f</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_MEDIUM_LOCATIONS" elementType="Argument">
+            <stringProp name="Argument.name">ORG_MEDIUM_LOCATIONS</stringProp>
+            <stringProp name="Argument.value">&quot;LOCATION1&quot;, &quot;LOCATION2&quot;, &quot;LOCATION3&quot;, &quot;LOCATION4&quot;, &quot;LOCATION5&quot;, &quot;LOCATION6&quot;, &quot;LOCATION7&quot;, &quot;LOCATION8&quot;, &quot;LOCATION9&quot;, &quot;LOCATION10&quot;, &quot;LOCATION11&quot;, &quot;LOCATION12&quot;, &quot;LOCATION13&quot;, &quot;LOCATION14&quot;, &quot;LOCATION15&quot;, &quot;LOCATION16&quot;, &quot;LOCATION17&quot;, &quot;LOCATION18&quot;, &quot;LOCATION19&quot;, &quot;LOCATION20&quot;, &quot;LOCATION21&quot;, &quot;LOCATION22&quot;, &quot;LOCATION23&quot;, &quot;LOCATION24&quot;, &quot;LOCATION25&quot;, &quot;LOCATION26&quot;, &quot;LOCATION27&quot;, &quot;LOCATION28&quot;, &quot;LOCATION29&quot;, &quot;LOCATION30&quot;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_LARGE_ORG_ID" elementType="Argument">
+            <stringProp name="Argument.name">ORG_LARGE_ORG_ID</stringProp>
+            <stringProp name="Argument.value">116e56a4-c481-11ed-acb3-0faf6ee1bc8f</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_LARGE_LOCATIONS" elementType="Argument">
+            <stringProp name="Argument.name">ORG_LARGE_LOCATIONS</stringProp>
+            <stringProp name="Argument.value">&quot;LOCATION1&quot;, &quot;LOCATION2&quot;, &quot;LOCATION3&quot;, &quot;LOCATION4&quot;, &quot;LOCATION5&quot;, &quot;LOCATION6&quot;, &quot;LOCATION7&quot;, &quot;LOCATION8&quot;, &quot;LOCATION9&quot;, &quot;LOCATION10&quot;, &quot;LOCATION11&quot;, &quot;LOCATION12&quot;, &quot;LOCATION13&quot;, &quot;LOCATION14&quot;, &quot;LOCATION15&quot;, &quot;LOCATION16&quot;, &quot;LOCATION17&quot;, &quot;LOCATION18&quot;, &quot;LOCATION19&quot;, &quot;LOCATION20&quot;, &quot;LOCATION21&quot;, &quot;LOCATION22&quot;, &quot;LOCATION23&quot;, &quot;LOCATION24&quot;, &quot;LOCATION25&quot;, &quot;LOCATION26&quot;, &quot;LOCATION27&quot;, &quot;LOCATION28&quot;, &quot;LOCATION29&quot;, &quot;LOCATION30&quot;, &quot;LOCATION31&quot;, &quot;LOCATION32&quot;, &quot;LOCATION33&quot;, &quot;LOCATION34&quot;, &quot;LOCATION35&quot;, &quot;LOCATION36&quot;, &quot;LOCATION37&quot;, &quot;LOCATION38&quot;, &quot;LOCATION39&quot;, &quot;LOCATION40&quot;, &quot;LOCATION41&quot;, &quot;LOCATION42&quot;, &quot;LOCATION43&quot;, &quot;LOCATION44&quot;, &quot;LOCATION45&quot;, &quot;LOCATION46&quot;, &quot;LOCATION47&quot;, &quot;LOCATION48&quot;, &quot;LOCATION49&quot;, &quot;LOCATION50&quot;, &quot;LOCATION51&quot;, &quot;LOCATION52&quot;, &quot;LOCATION53&quot;, &quot;LOCATION54&quot;, &quot;LOCATION55&quot;, &quot;LOCATION56&quot;, &quot;LOCATION57&quot;, &quot;LOCATION58&quot;, &quot;LOCATION59&quot;, &quot;LOCATION60&quot;, &quot;LOCATION61&quot;, &quot;LOCATION62&quot;, &quot;LOCATION63&quot;, &quot;LOCATION64&quot;, &quot;LOCATION65&quot;, &quot;LOCATION66&quot;, &quot;LOCATION67&quot;, &quot;LOCATION68&quot;, &quot;LOCATION69&quot;, &quot;LOCATION70&quot;, &quot;LOCATION71&quot;, &quot;LOCATION72&quot;, &quot;LOCATION73&quot;, &quot;LOCATION74&quot;, &quot;LOCATION75&quot;, &quot;LOCATION76&quot;, &quot;LOCATION77&quot;, &quot;LOCATION78&quot;, &quot;LOCATION79&quot;, &quot;LOCATION80&quot;, &quot;LOCATION81&quot;, &quot;LOCATION82&quot;, &quot;LOCATION83&quot;, &quot;LOCATION84&quot;, &quot;LOCATION85&quot;, &quot;LOCATION86&quot;, &quot;LOCATION87&quot;, &quot;LOCATION88&quot;, &quot;LOCATION89&quot;, &quot;LOCATION90&quot;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ORG_ID" elementType="Argument">
+            <stringProp name="Argument.name">ORG_ID</stringProp>
+            <stringProp name="Argument.value">${__P(org_id, 9ced677d-7197-423e-87b2-32689a34ef23)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEFAULT_LOCATIONS" elementType="Argument">
+            <stringProp name="Argument.name">DEFAULT_LOCATIONS</stringProp>
+            <stringProp name="Argument.value">&quot;423658b5-9529-4d2b-b1b1-9cdf3bbae1f6&quot;, &quot;0fdb64ab-7770-4a47-b305-245936b6be51&quot;, &quot;DEF&quot;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="LOCATIONS" elementType="Argument">
+            <stringProp name="Argument.name">LOCATIONS</stringProp>
+            <stringProp name="Argument.value">${__P(locations)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="TIMEZONE" elementType="Argument">
+            <stringProp name="Argument.name">TIMEZONE</stringProp>
+            <stringProp name="Argument.value">${__P(timezone, Us/Central)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="HOURLY_WASH_DATE" elementType="Argument">
+            <stringProp name="Argument.name">HOURLY_WASH_DATE</stringProp>
+            <stringProp name="Argument.value">${__P(hourly_wash_date, 2023-08-31)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREADS" elementType="Argument">
+            <stringProp name="Argument.name">THREADS</stringProp>
+            <stringProp name="Argument.value">${__P(threads, 20)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RAMP_UP_PERIOD" elementType="Argument">
+            <stringProp name="Argument.name">RAMP_UP_PERIOD</stringProp>
+            <stringProp name="Argument.value">${__P(ramp_up_period, 1800)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">*/*</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Authorization</stringProp>
+            <stringProp name="Header.value">${AUTH_TOKEN}</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${HOST_URL}</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Sales and Labor Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${THREADS}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RAMP_UP_PERIOD}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <RandomOrderController guiclass="RandomOrderControllerGui" testclass="RandomOrderController" testname="Year Controller - ROC" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Total Cars Washed Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/total-cars-washed</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Individual Wash Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/individual-wash</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Total Wash Sales Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/total-sales</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Average Monthly Sales Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/average-monthly-sales</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Average Daily Sales Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/average-daily-sales</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Cash Vs Card Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/cash-v-card-transactions</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Cars Per Labor Hour Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/cars-per-labor-hour</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Labor % of Total Sales Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/labor-percentage-total-sales</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Total Labor Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/total-labor</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Busiest Day of the Week Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/busiest-day-of-the-week</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Labor Cost Per Car Yearly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_LARGE_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_YEAR}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_YEAR}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/labor-cost-per-car</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <RandomOrderController guiclass="RandomOrderControllerGui" testclass="RandomOrderController" testname="Quarter Controller - ROC" enabled="false"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Total Cars Washed Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/total-cars-washed</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Individual Wash Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/individual-wash</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Total Wash Sales Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/total-sales</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Average Monthly Sales Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/average-monthly-sales</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Average Daily Sales Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/average-daily-sales</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Cash Vs Card Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/cash-v-card-transactions</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Cars Per Labor Hour Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/cars-per-labor-hour</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Labor % of Total Sales Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/labor-percentage-total-sales</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Total Labor Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/total-labor</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Busiest Day of the Week Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/busiest-day-of-the-week</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Labor Cost Per Car Quarterly" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${START_TIME_QUARTER}&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${END_TIME_QUARTER}&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;monthly&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;trailing_12&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/sales-and-labor/labor-cost-per-car</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Hourly Wash Volume" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;org_id&quot;: &quot;${ORG_ID}&quot;,&#xd;
+    &quot;locations&quot;: [&#xd;
+        ${ORG_MEDIUM_LOCATIONS}&#xd;
+    ],&#xd;
+    &quot;time_range&quot;: {&#xd;
+        &quot;start_time&quot;: &quot;${HOURLY_WASH_DATE}T00:00:00Z&quot;,&#xd;
+        &quot;end_time&quot;: &quot;${HOURLY_WASH_DATE}T23:59:59Z&quot;&#xd;
+    },&#xd;
+    &quot;group_by_frequency&quot;: &quot;&quot;,&#xd;
+    &quot;comparison_mode&quot;: &quot;&quot;,&#xd;
+    &quot;timezone&quot;: &quot;${TIMEZONE}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">v1/sales-and-labor/raw-data/hourly-wash-volume</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">/home/yums/Ningthem/WM/jmeter-configs/multi-endpoints/reports.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
