@@ -25,3 +25,14 @@ jobs:
           name: jmeter-results
           path: result.jtl
           if-no-files-found: error
+      # Generate HTML report from the JTL results
+      - name: Generate HTML Report
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/test justb4/jmeter:latest \
+          -g /test/results.jtl -o /test/report
+      # Upload the HTML report as an artifact
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: jmeter-html-report
+          path: report
