@@ -23,16 +23,28 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: jmeter-results
-          path: result.jtl
+          path: results.jtl
           if-no-files-found: error
       # Generate HTML report from the JTL results
       - name: Generate HTML Report
         run: |
           docker run --rm -v ${{ github.workspace }}:/test justb4/jmeter:latest \
-          -g /results.jtl -o /test/report
+          -g /test/result.jtl -o /test/report
       # Upload the HTML report as an artifact
       - name: Upload HTML Report
         uses: actions/upload-artifact@v3
         with:
           name: jmeter-html-report
           path: report
+      - name: Send Report to Teams
+        run: |
+          curl -H 'Content-Type: application/json' \
+          -d '{
+                "title": "JMeter Test Report",
+                "text": "Performance test completed. Download the HTML report from the link below:",
+                "sections": [{
+                  "activityTitle": "JMeter Report",
+                  "activitySubtitle": "Click [here](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts) to download the report."
+                }]
+              }' \
+          ${{ secrets.TEAMS_WEBHOOK_URL }}
