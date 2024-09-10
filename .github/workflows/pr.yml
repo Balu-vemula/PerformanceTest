@@ -32,7 +32,7 @@ jobs:
           -g /test/results.jtl -o /test/report
       # Upload the HTML report as an artifact
       - name: Upload HTML Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: jmeter-html-report
           path: report
